@@ -62,19 +62,21 @@ class PCF85176 {
     protected:
         // Private variables
         uint8_t _buffer[BUFFERSIZE];
+
+        void _setMode(ModeStatus status, ModeBias bias, ModeDrive drive);
+
+        // Mapping chars to 7-segment bits
+        // Every LCD screen class should implement this method
+        virtual uint8_t _getCharBits(char character);
+
+    private:
         TwoWire& _i2c;
         uint8_t _address;
         uint8_t _subaddress;
         ModeBias _bias;
         ModeDrive _drive;
 
-        // Private methods
         void _deviceSelect();
-        void _setMode(ModeStatus status, ModeBias bias, ModeDrive drive);
-
-        // Mapping chars to 7-segment bits
-        // Every LCD screen class should implement this method
-        virtual uint8_t _getCharBits(char character);
 
 };
 #endif
