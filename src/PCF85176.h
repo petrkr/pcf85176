@@ -49,7 +49,7 @@ typedef enum {
 
 class PCF85176 {
     public:
-        PCF85176(TwoWire& i2c, uint8_t address = 56, uint8_t subaddress = 0);
+        PCF85176(TwoWire& i2c, uint8_t address, uint8_t subaddress);
         virtual void begin();
         void bankSelect(uint8_t input, uint8_t output);
         void blink(BlinkFrequency blink = BLINK_FREQUENCY_OFF, BlinkMode mode = BLINK_MODE_NORMAL);
@@ -71,5 +71,14 @@ class PCF85176 {
 
         void _deviceSelect();
 
+};
+
+class PCF85176Generic : public PCF85176 {
+    public:
+        PCF85176Generic(TwoWire& i2c, uint8_t address = 56, uint8_t subaddress = 0) : PCF85176(i2c, address, subaddress) {}
+        void begin(ModeBias bias = MODE_BIAS_13, ModeDrive drive = MODE_DRIVE_14) {
+            PCF85176::begin();
+            _setMode(MODE_STATUS_ENABLED, bias, drive);
+        }
 };
 #endif

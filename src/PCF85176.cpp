@@ -9,7 +9,6 @@ PCF85176::PCF85176(TwoWire& i2c, uint8_t address, uint8_t subaddress) : _i2c(i2c
 
 void PCF85176::begin() {
     _deviceSelect();
-    _setMode(MODE_STATUS_ENABLED, MODE_BIAS_13, MODE_DRIVE_14);
 }
 
 void PCF85176::bankSelect(uint8_t input, uint8_t output) {
