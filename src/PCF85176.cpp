@@ -2,15 +2,9 @@
 #include "PCF85176.h"
 
 
-PCF85176::PCF85176(TwoWire& i2c, uint8_t address, uint8_t subaddress, uint8_t backlight) : _i2c(i2c) {
+PCF85176::PCF85176(TwoWire& i2c, uint8_t address, uint8_t subaddress) : _i2c(i2c) {
     _address = address;
     _subaddress = subaddress;
-    _backlight = backlight;
-
-    if (_backlight > -1) {
-        pinMode(_backlight, OUTPUT);
-        digitalWrite(_backlight, LOW);
-    }
 }
 
 void PCF85176::begin() {
