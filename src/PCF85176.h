@@ -36,16 +36,16 @@ typedef enum {
 } BlinkMode;
 
 // Define commands
-#define CMD_LOAD_POINTER 	0x00
-#define CMD_MODE 			0x40
+#define CMD_LOAD_POINTER	0x00
+#define CMD_MODE			0x40
 #define CMD_DEVICE_SELECT	0x60
 #define CMD_BLINK			0x70
 #define CMD_BANK_SELECT		0x78
 #define CMD_LAST_COMMAND	0x80
 
 // Max address - TODO: make it somehow display-based
-#define MAX_ADDRESS 	39
-#define BUFFERSIZE 		20
+#define MAX_ADDRESS		39
+#define BUFFERSIZE		20
 
 class PCF85176 {
 	public:
