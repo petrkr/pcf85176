@@ -60,7 +60,7 @@ class PCF85176 {
         void write(uint8_t *data, size_t length, uint8_t address = 0);
 
     protected:
-        // Private variables
+        //Maybe not needed this one and make it only for child class
         uint8_t _buffer[BUFFERSIZE];
 
         void _setMode(ModeStatus status, ModeBias bias, ModeDrive drive);
