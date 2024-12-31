@@ -1,0 +1,37 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PCF85176	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+bankSelect	KEYWORD2
+blink	KEYWORD2
+clear	KEYWORD2
+display	KEYWORD2
+noDisplay	KEYWORD2
+write	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MODE_STATUS_BLANK	LITERAL1
+MODE_STATUS_ENABLED	LITERAL1
+MODE_BIAS_12	LITERAL1
+MODE_BIAS_13	LITERAL1
+MODE_DRIVE_STATIC	LITERAL1
+MODE_DRIVE_12	LITERAL1
+MODE_DRIVE_13	LITERAL1
+MODE_DRIVE_14	LITERAL1
+BLINK_FREQUENCY_OFF	LITERAL1
+BLINK_FREQUENCY_1	LITERAL1
+BLINK_FREQUENCY_2	LITERAL1
+BLINK_FREQUENCY_3	LITERAL1
+BLINK_MODE_NORMAL	LITERAL1
+BLINK_MODE_ALTRAM	LITERAL1
