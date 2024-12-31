@@ -60,14 +60,7 @@ class PCF85176 {
         void write(uint8_t *data, size_t length, uint8_t address = 0);
 
     protected:
-        //Maybe not needed this one and make it only for child class
-        uint8_t _buffer[BUFFERSIZE];
-
         void _setMode(ModeStatus status, ModeBias bias, ModeDrive drive);
-
-        // Mapping chars to 7-segment bits
-        // Every LCD screen class should implement this method
-        virtual uint8_t _getCharBits(char character);
 
     private:
         TwoWire& _i2c;
